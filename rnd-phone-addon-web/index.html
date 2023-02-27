@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Origin Trial Token, feature = WebUSB (For Chrome M57+), origin = https://webusb.github.io, expires = 2017-06-19 -->
+    <meta http-equiv="origin-trial" data-feature="WebUSB (For Chrome M57+)" data-expires="2017-06-19" content="Ag83MurQOa5N4SKRCqqtSlbycfe08s5LgUiqEI7J3jTk2NEIpRp7SLPz2i+EBDuXyf+AeRMdD6BI++kTSJmGzQEAAABReyJvcmlnaW4iOiJodHRwczovL3dlYnVzYi5naXRodWIuaW86NDQzIiwiZmVhdHVyZSI6IldlYlVTQjIiLCJleHBpcnkiOjE0OTc4OTM2OTV9">
+    <title>RGB Color Picker</title>
+    <script src="serial.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <p>
+      <button id="connect">Connect</button> <span id="status"></span>
+      <hr>
+      <div id="rgb sensor"></div>
+      <div id="rgb input">
+        <label for="red">Red:</label>
+        <input type="range" min="1" max="255" value="100" class="slider" id="red" oninput="redSliderChange()"><br>
+        <output id="redValue"></output>
+
+        <label for="green">Green:</label>
+        <input type="range" min="1" max="255" value="100" class="slider" id="green" oninput="greenSliderChange()"><br>
+        <output id="greenValue"></output>
+
+        <label for="blue">Blue:</label>
+        <input type="range" min="1" max="255" value="100" class="slider" id="blue" oninput="blueSliderChange()"><br>
+        <output id="blueValue"></output>
+
+        <input type="submit" value="Submit" id="submit button">
+      </div>
+      <div id="rgbVisualizer" style="height: 50px; width: 50px;"></div>
+      <div id="color parent"></div>
+    </p>
+  </body>
+</html>
