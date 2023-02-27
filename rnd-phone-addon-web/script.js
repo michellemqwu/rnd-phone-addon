@@ -26,8 +26,8 @@ function getRGBSliderValues() {
 function addNewColor(red, green, blue) {
   let formattedRGB = 'R: ' + red + ' B: ' + blue + ' G: ' + green;
   let newDiv = document.createElement('div');
-  newDiv.className('selectedColor');
   document.getElementById('color parent').prepend(newDiv);
+  newDiv.classList.add('selectedColor');
   newDiv.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
   newDiv.innerHTML = '<p>' + formattedRGB + '</p>';
 }
