@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Origin Trial Token, feature = WebUSB (For Chrome M57+), origin = https://webusb.github.io, expires = 2017-06-19 -->
-    <meta http-equiv="origin-trial" data-feature="WebUSB (For Chrome M57+)" data-expires="2017-06-19" content="Ag83MurQOa5N4SKRCqqtSlbycfe08s5LgUiqEI7J3jTk2NEIpRp7SLPz2i+EBDuXyf+AeRMdD6BI++kTSJmGzQEAAABReyJvcmlnaW4iOiJodHRwczovL3dlYnVzYi5naXRodWIuaW86NDQzIiwiZmVhdHVyZSI6IldlYlVTQjIiLCJleHBpcnkiOjE0OTc4OTM2OTV9">
-    <title>RGB Color Picker</title>
-    <script src="serial.js"></script>
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <p>
-      <button id="connect">Connect</button> <span id="status"></span>
-      <hr>
-      <div id="rgb sensor"></div>
-      <div id="rgb input">
+
+<head>
+  <!-- Origin Trial Token, feature = WebUSB (For Chrome M57+), origin = https://webusb.github.io, expires = 2017-06-19 -->
+  <meta http-equiv="origin-trial" data-feature="WebUSB (For Chrome M57+)" data-expires="2017-06-19"
+    content="Ag83MurQOa5N4SKRCqqtSlbycfe08s5LgUiqEI7J3jTk2NEIpRp7SLPz2i+EBDuXyf+AeRMdD6BI++kTSJmGzQEAAABReyJvcmlnaW4iOiJodHRwczovL3dlYnVzYi5naXRodWIuaW86NDQzIiwiZmVhdHVyZSI6IldlYlVTQjIiLCJleHBpcnkiOjE0OTc4OTM2OTV9">
+  <title>RGB Color Picker Add-on</title>
+  <script src="serial.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <p>
+  <h1>RGB Color Picker Add-on</h1>
+  <button id="connect">Connect</button> <span id="status"></span>
+  <hr>
+
+  <h2>Submit Your Own Color</h2>
+  <div id="rgbInput">
+    <div id="rgbSliders">
+      <div style="width: 100%;">
         <label for="red">Red:</label>
-        <input type="range" min="1" max="255" value="100" class="slider" id="red" oninput="redSliderChange()"><br>
-        <output id="redValue"></output>
-
-        <label for="green">Green:</label>
-        <input type="range" min="1" max="255" value="100" class="slider" id="green" oninput="greenSliderChange()"><br>
-        <output id="greenValue"></output>
-
-        <label for="blue">Blue:</label>
-        <input type="range" min="1" max="255" value="100" class="slider" id="blue" oninput="blueSliderChange()"><br>
-        <output id="blueValue"></output>
-
-        <input type="submit" value="Submit" id="submit button">
+        <input type="range" min="1" max="255" value="100" class="slider" id="red" oninput="redSliderChange()">
+        <output id="redValue"></output><br>
       </div>
-      <div id="rgbVisualizer" style="height: 50px; width: 50px;"></div>
-      <div id="color parent"></div>
-    </p>
-  </body>
+
+      <label for="green">Green:</label>
+      <input type="range" min="1" max="255" value="100" class="slider" id="green" oninput="greenSliderChange()">
+      <output id="greenValue"></output><br>
+
+      <label for="blue">Blue:</label>
+      <input type="range" min="1" max="255" value="100" class="slider" id="blue" oninput="blueSliderChange()">
+      <output id="blueValue"></output><br><br>
+
+      <input type="submit" value="Submit" id="submitButton">
+    </div>
+    <div id="rgbVisualizer"></div>
+  </div>
+  <hr>
+
+  <h2>Scan Your Own Color</h2>
+  <div id="rgb sensor"></div>
+  <hr>
+
+  <h2>Saved Colors</h2>
+  <div id="color parent"></div>
+  </p>
+  
+</body>
+
 </html>

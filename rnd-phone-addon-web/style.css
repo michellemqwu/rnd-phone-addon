@@ -1,0 +1,29 @@
+h1 {
+    text-align:center;
+}
+
+#rgbInput {
+    display: grid;
+    grid-template-columns: auto auto; 
+    grid-template-rows: 300px;
+    grid-column-gap: 5px;
+    padding: 10px;
+}
+
+#rgbVisualizer {
+    height: 100%;
+    width: 100%;
+}
+
+.slider {
+    width: 50%; 
+    height: 50px;
+}
+
+label {
+    font-size: 25px;
+}
+
+#submitButton{
+    height: 30px;
+}
