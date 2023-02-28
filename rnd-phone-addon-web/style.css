@@ -27,3 +27,18 @@ label {
 #submitButton{
     height: 30px;
 }
+
+#rgbSensor {
+    width: 400px;
+    height: 200px;
+}
+
+.selectedColor {
+    width: 100%;
+    height: 100px;
+}
+
+p {
+    padding: 50px;
+    font-size: 40px;
+}

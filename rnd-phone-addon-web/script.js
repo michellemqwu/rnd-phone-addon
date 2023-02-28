@@ -38,7 +38,7 @@ function addNewColor(red, green, blue) {
   document.addEventListener('DOMContentLoaded', event => {
     let connectButton = document.querySelector("#connect");
     let statusDisplay = document.querySelector('#status');
-    let rgbSensorDiv = document.getElementById('rgb sensor');
+    let rgbSensorDiv = document.getElementById('rgbSensor');
     let submitButton = document.getElementById('submitButton');
     let redSlider = document.getElementById('red');
     let greenSlider = document.getElementById('green');
