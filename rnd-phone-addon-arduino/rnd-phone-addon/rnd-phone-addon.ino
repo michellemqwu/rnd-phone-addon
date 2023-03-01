@@ -9,8 +9,8 @@ Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS3472
 int currentButtonState;
 int lastButtonState = LOW;
 
-WebUSB WebUSBSerial(1,"http://127.0.0.1:5500/index.html");
-//WebUSB WebUSBSerial(1, "https://michellemqwu.github.io/rnd-phone-addon/rnd-phone-addon-web/");
+//WebUSB WebUSBSerial(1,"http://127.0.0.1:5500/index.html");
+WebUSB WebUSBSerial(1, "https://michellemqwu.github.io/rnd-phone-addon/rnd-phone-addon-web/");
 #define Serial WebUSBSerial
 
 void setup() {
