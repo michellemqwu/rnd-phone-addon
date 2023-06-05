@@ -23,6 +23,16 @@ function getRGBSliderValues() {
   return 'rgb(' + red + ',' + green + ',' + blue + ')';
 }
 
+function showContent(sectionId) {
+  let contentSections = document.getElementsByClassName("content-section");
+  for (let i = 0; i < contentSections.length; i++) {
+    contentSections[i].classList.remove('active');
+  }
+
+  let section = document.getElementById(sectionId);
+  section.classList.add('active');
+}
+
 function addNewColor(red, green, blue) {
   let formattedRGB = 'R: ' + red + ' B: ' + blue + ' G: ' + green;
   let newDiv = document.createElement('div');
@@ -31,6 +41,7 @@ function addNewColor(red, green, blue) {
   newDiv.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
   newDiv.innerHTML = '<p>' + formattedRGB + '</p>';
 }
+
 
 (function () {
   'use strict';

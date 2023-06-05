@@ -12,41 +12,46 @@
 </head>
 
 <body>
-  <p>
+  <header>
   <h1>RGB Color Picker Add-on</h1>
-  <button id="connect">Connect</button> <span id="status"></span>
-  <hr>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a onclick="showContent('scan')">Scan Color</a></li>
+      <li><a onclick="showContent('submitColor')">Submit Color</a></li>
+      <li><a onclick="showContent('saved')">Saved Colors</a></li>
+    </ul>
+  </nav>
 
-  <h2>Submit Your Own Color</h2>
-  <div id="rgbInput">
-    <div id="rgbSliders">
-      <div style="width: 100%;">
-        <label for="red">Red:</label>
-        <input type="range" min="1" max="255" value="100" class="slider" id="red" oninput="redSliderChange()">
-        <output id="redValue"></output><br>
-      </div>
+  <div id="scan" class="content-section active">
+    <button id="connect">Connect</button> <span id="status"></span>
+    <h2>Scan Your Own Color</h2>
+    <div id="rgbSensor"></div>
+  </div>
+
+  <div id="submitColor" class="content-section">
+    <h2>Submit Your Own Color</h2>
+      <div id="rgbVisualizer"></div>
+      <label for="red">Red:</label>
+      <input type="range" min="0" max="255" value="100" class="slider" id="red" oninput="redSliderChange()">
+      <output id="redValue"></output><br>
 
       <label for="green">Green:</label>
-      <input type="range" min="1" max="255" value="100" class="slider" id="green" oninput="greenSliderChange()">
+      <input type="range" min="0" max="255" value="100" class="slider" id="green" oninput="greenSliderChange()">
       <output id="greenValue"></output><br>
 
       <label for="blue">Blue:</label>
-      <input type="range" min="1" max="255" value="100" class="slider" id="blue" oninput="blueSliderChange()">
-      <output id="blueValue"></output><br><br>
-
+      <input type="range" min="0" max="255" value="100" class="slider" id="blue" oninput="blueSliderChange()">
+      <output id="blueValue"></output><br>
       <input type="submit" value="Submit" id="submitButton">
-    </div>
-    <div id="rgbVisualizer"></div>
+
   </div>
-  <hr>
 
-  <h2>Scan Your Own Color</h2>
-  <div id="rgbSensor"></div>
-  <hr>
-
-  <h2>Saved Colors</h2>
-  <div id="color parent"></div>
-  </p>
+  <div id="saved" class="content-section">
+    <h2>Saved Colors</h2>
+    <div id="color parent"></div>
+  </div>
   
 </body>
 

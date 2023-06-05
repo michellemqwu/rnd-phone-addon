@@ -2,7 +2,7 @@ h1 {
     text-align:center;
 }
 
-#rgbInput {
+#submit {
     display: grid;
     grid-template-columns: auto auto; 
     grid-template-rows: 300px;
@@ -41,4 +41,12 @@ label {
 p {
     padding: 50px;
     font-size: 40px;
+}
+
+.content-section {
+    display: none;
+}
+  
+.active {
+    display: block;
 }
